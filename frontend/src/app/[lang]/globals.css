@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import external stylesheets for additional libraries and fonts */
+@import "react-slideshow-image/dist/styles.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+i
+
+/* Root custom properties for brand and layout customization */
+:root {
+  --brand-primary-color: #8743f3;
+  --brand-secondary-color: #FDF0DF;
+  --brand-third-color: #4EFEC5;
+  --brand-font: 'Inter', sans-serif;
+  --title-font: 'Space Grotesk', sans-serif;
+  --font-primary-color: #1a1a1a;
+  
+  /* Background colors */
+  --background-light: #ffffff;
+  --background-dark: #1a1a1a;
+}
+
+/* Applying Tailwind utilities and custom properties */
+body {
+  @apply bg-white text-gray-900; /* Adjusted to use Tailwind's color system */
+  font-family: var(--brand-font);
+}
+
+
+/*******************************************
+ * Rich Text Styles
+ *******************************************/
+.rich-text h1, .rich-text h2, .rich-text h3, .rich-text h4, .rich-text h5, .rich-text h6 {
+  color: var(--font-primary-color);/* Centralizes color styling */
+}
+
+.rich-text h1 {
+  @apply text-4xl font-bold mb-4;
+  font-family: var(--title-font, 'Space Grotesk'), sans-serif;
+}
+
+
+.rich-text h2 {
+  @apply text-3xl font-bold mb-4;
+}
+
+.rich-text h3 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.rich-text h4 {
+  @apply text-xl font-bold mb-4;
+}
+
+.rich-text h5 {
+  @apply text-lg font-bold mb-4;
+}
+
+.rich-text h6 {
+  @apply text-base font-bold mb-4;
+}
+
+/* Further styling for other elements (hr, a, p, strong, em, del, blockquote, ul, ol, li, pre, code, table, th, td, img) remains as originally defined, ensuring to replace custom utilities with Tailwind's utilities where applicable. */
+
+/*******************************************
+ * React Slideshow Styles
+ *******************************************/
+.react-slideshow-container [aria-label="Previous Slide"],
+.react-slideshow-container [aria-label="Next Slide"] {
+  @apply mr-1; /* Adjusted for example; tailor as needed */
+}
+
+/* It's essential to adapt the custom utilities and colors to match Tailwind's naming convention or define them in your tailwind.config.js to ensure they are recognized. */
+

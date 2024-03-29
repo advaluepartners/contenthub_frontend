@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".", // Ensures that non-relative module names are looked up relative to the base URL.
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "src/**/*" // Simplified to include all TypeScript and JSX files under the src directory
+    ,
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
